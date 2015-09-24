@@ -2,49 +2,66 @@
  * Created by sander on 17.09.15.
  */
 public class User {
-    int ID;
-    String Email;
-    String Password;
-    String Type;
+    int id;
+    String email;
+    String password;
+    String type;
 
-    public User (int ID, String Email, String Password, String Type){
-        this.ID = ID;
-        this.Email = Email;
-        this.Password = Password;
-        this.Type = Type;
+
+    public User (int id, String email, String password, String type){
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.type = type;
+
     }
 
-    
-    public int getID() {
-        return ID;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        return id == user.id;
+
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    @Override
+    public int hashCode() {
+        return id;
     }
 
-    public String getEmail() {
-        return Email;
+    public int getid() {
+        return id;
     }
 
-    public void setEmail(String email) {
-        Email = email;
+    public void setid(int id) {
+        this.id = id;
     }
 
-    public String getPassword() {
-        return Password;
+    public String getemail() {
+        return email;
     }
 
-    public void setPassword(String password) {
-        Password = password;
+    public void setemail(String email) {
+        email = email;
     }
 
-    public String getType() {
-        return Type;
+    public String getpassword() {
+        return password;
     }
 
-    public void setType(String type) {
-        Type = type;
+    public void setpassword(String password) {
+        password = password;
+    }
+
+    public String gettype() {
+        return type;
+    }
+
+    public void settype(String type) {
+        type = type;
     }
 
 
